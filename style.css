@@ -1,0 +1,454 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* 
+navbar brand */
+.navbar-brand
+{
+    letter-spacing: 0.5px;
+    font-weight:700;
+    font-family:italic;
+
+}
+
+/*
+navbar*/
+
+.navbar
+{
+    position:fixed-top;
+    background-color:#e9e8e6;
+   box-shadow:0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+}
+.navbar-nav .nav-link {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: -1.2px; /* Adjust the value to control the distance between the text and the underline */
+    left:0;
+    width:100%;
+    height:2px; /* Adjust the thickness of the underline */
+    background-color:#1FC7BD; 
+    transform: scaleX(0);
+    transition: transform 0.2s ease;/* transition takes place in seconds */
+  }
+  
+  .navbar-nav .nav-link:hover::before {
+    transform: scaleX(0.5); /*for the length of the hovering lines */ 
+  }
+
+/*
+main section */ 
+#main {
+    width: 100%;
+    height: 100vh;
+    background: url("images/bg.jpg") top right;
+    background-size: cover;
+
+  }
+  
+  #main .container {
+    padding-top: 70px;
+    position: relative;
+  }
+  
+ 
+  #main h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    color:#1FC7BD ;
+  }
+  
+  #main h2 {
+    color: #6f6f6f;
+    margin: 10px 0 40px 0;
+    font-size: 30px;
+ font-weight:600;
+}
+/* 
+btn */
+#main .btn-about{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 12px 30px;
+    outline:none;
+    border:none;
+    border-radius: 30px;
+    margin-top: 30px;
+    color: #fff;
+    background: #1FC7BD;
+  }
+  
+  #main .btn-about:hover 
+  {
+    background: 	#2A9286;
+    color:white;
+  }
+#socialicons .sidenav
+
+{
+  width:50px;
+  position:fixed;
+  top:50%;
+  left:0;
+transform:translateY(-50%);
+z-index:1;
+
+
+}
+.sidenav li
+{
+  list-style-type: none;
+}
+#socialicons .sidenav li a
+{
+
+text-decoration: none;
+}
+.sidenav .bx
+{
+  
+display:block;
+width:20px;
+margin:0 auto 20px;
+cursor:pointer;
+color:#1FC7BD;
+font-size: 40px;
+}
+ .sidenav .bx:hover
+ {
+    color:#45BEEC;
+ } 
+  
+  @media all (max-width:670px)
+  {
+    #main h1
+    {
+        color:#000080;
+    }
+    #main h2
+    {
+        color:#000;
+        font-size: 20px;
+}
+.sidenav {
+  width: 14px;
+  margin: 15px auto;
+}
+.sidenav bx{
+  display: block;
+ cursor: pointer;
+  }
+  }
+/*
+ about section*/
+ #about
+ {
+   padding:3rem;
+ }
+
+#about .heading
+{
+   margin-top: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 40px;
+}
+.bx
+{
+   font-size: 45px;
+   }
+   #about .rounded
+   {
+      width:100%;
+      height:70vh;
+   }
+   #about .container .row .content {
+   
+       padding: 3rem;
+     }
+   #about .row .content h3 {
+       text-align: justify;
+       font-size: 2.5rem;
+       color:#45BEEC ;
+     }
+     
+     #about .row .content p {
+       font-size: 1.3rem;
+       margin-top: 1rem;
+       font-weight: 500;
+       text-transform: none;
+   
+     }
+     #about .row .content .box {
+      gap: 1rem;
+       font-family: "Nunito";
+       font-weight: 600;
+     }
+     #about .row .content .box p {
+       text-transform: none;
+   
+     }
+     #about .row .content .box p span {
+       color:#45BEEC ;
+font-weight:800;
+     }
+     @media (max-width: 768px) {
+        #about {
+            padding: 30px;
+        }
+    
+        .container {
+            flex-direction: column;
+        }
+    
+        .container img {
+            margin-bottom: 20px;
+        }
+    }
+    /*education
+    ...... starts*/
+     #edu .education {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .box-shadow {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px;
+        text-align: center;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    }
+    
+    .graduation-icon .bx {
+        font-size: 55px;
+        margin-bottom: 10px;
+        color:#1FC7BD
+    }
+    
+    .percent {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 19px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    
+    
+
+@media (max-width: 768px) {
+    .box-shadow {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .box-shadow {
+        width: 45%;
+    }
+}
+
+ /*
+ education ends*/   
+     
+ /*skills starts
+ */
+#skills {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+  }
+  
+  #skills .heading {
+    margin-bottom: 40px;
+    color: #000;
+  }
+  
+  #skills .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #skills .col-md-3 {
+    margin-bottom: 40px;
+  }
+  
+  #skills img {
+    
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s;
+  }
+  
+ 
+  .skill-box {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .skill-box:hover {
+    transform: translateY(-5px);
+  }
+  /*----contact
+  -----------*/
+  #contact {
+
+    min-height: 60vh;
+    background: #e5ecfb86;
+  }
+  #contact h2
+  {
+    text-align: center;
+  }
+  .field .bx
+  {
+    font-size: 20px;
+  }
+  #contact .container {
+    max-width: 75vw;
+    width: 75%;
+    background: #fff;
+    border-radius: 1.5rem;
+    margin: 1rem 5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  #contact .container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 2rem;
+  }
+  #contact .content .image-box {
+    max-width: 50%;
+    margin-left: 4rem;
+  }
+  #contact .content .image-box img {
+    width: 100%;
+    height: 35rem;
+    position: relative;
+  }
+  #contact .content form {
+    width: 45%;
+    margin-right: 3.5rem;
+  }
+  form .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .form-group .field {
+    height: 50px;
+    display: flex;
+    position: relative;
+    margin: 1rem;
+    width: 100%;
+  }
+  form i {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: rgb(51, 51, 51);
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  form .field input,
+  form .message textarea {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 16px 0 48px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    border: 1px solid rgb(51, 51, 51);
+    background: #e5ecfb;
+  }
+  .field input::placeholder,
+  .message textarea::placeholder {
+    color: rgb(51, 51, 51);
+  }
+  .field input:focus,
+  .message textarea:focus {
+    padding-left: 47px;
+    border: 2px solid rgb(115, 3, 167);
+  }
+  
+  form .message {
+    position: relative;
+    margin: 1rem;
+    width: 100%;
+  }
+  form .message i {
+    top: 25px;
+    font-size: 20px;
+    left: 15px;
+  }
+  form .message textarea {
+    min-height: 130px;
+    max-height: 230px;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 12px 20px 0 48px;
+  }
+ 
+  form .button-area {
+    display: flex;
+    float: right;
+    flex-direction: row-reverse;
+  }
+  .button-area button {
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 13px 25px;
+    background: #1FC7BD;
+    box-shadow: 0px 5px 10px rgba(20, 224, 227, 0.725);
+    transition: 0.3s ease;
+    font-family: "Nunito", sans-serif;
+  }
+  .button-area button:hover {
+    background: #1FC7BD;
+  }
+  .button-area span {
+    font-size: 17px;
+    padding: 1rem;
+    display: none;
+  }
+  .button-area button i {
+    position: relative;
+    top: 6px;
+    left: 2px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    color: #fff;
+  }
+  .button-area button:hover i {
+    left: 8px;
+  }
+  
+  
+  
+  
